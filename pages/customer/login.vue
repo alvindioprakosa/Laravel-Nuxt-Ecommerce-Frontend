@@ -6,7 +6,7 @@
         <div class="card-group">
           <div class="card border-top-orange border-0 shadow-sm rounded">
             <div class="card-body">
-              <h3>LOGIN</h3>
+              <h3>Login</h3>
               <hr>
               <div v-if="validation.message" class="mt-2">
                 <b-alert show variant="danger">{{ validation.message }}</b-alert>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="row">
                   <div class="col-12">
-                    <button class="btn btn-warning shadow-sm rounded-sm px-4 w-100" type="submit">LOGIN</button>
+                    <button class="btn btn-warning shadow-sm rounded-sm px-4 w-100" type="submit">Login</button>
                   </div>
                 </div>
               </form>
@@ -46,7 +46,7 @@
       </div>
     </div>
     <div class="text-center mt-3">
-      Belum punya akun? <nuxt-link :to="{name: 'customer-register'}" class="font-weight-bold">Daftar Sekarang</nuxt-link>
+      Belum punya akun? <nuxt-link :to="{name: 'customer-register'}" class="font-weight-bold">Daftarkan Sekarang</nuxt-link>
     </div>
     </div>
   </div>
