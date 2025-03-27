@@ -1,35 +1,34 @@
 <template>
   <div>
-    <!-- header -->
+    <!-- Header -->
     <Header />
-    <!-- end header -->
 
-    <!-- content -->
-    <Nuxt />
-    <!-- end content -->
+    <!-- Content -->
+    <main class="container">
+      <Nuxt />
+    </main>
 
-    <!-- footer -->
+    <!-- Footer -->
     <Footer />
-    <!-- end footer -->
   </div>
 </template>
 
 <script>
+import Header from '@/components/web/header.vue'
+import Footer from '@/components/web/footer.vue'
 
-  import Header from '@/components/web/header.vue'
-  import Footer from '@/components/web/footer.vue'
-
-  export default {
-
-    //register components
-    components: {
-      Header,
-      Footer
-    }
-
+export default {
+  layout: 'default', // Menyatakan ini adalah layout utama
+  components: {
+    Header,
+    Footer
   }
+}
 </script>
 
-<style>
-
+<style scoped>
+.container {
+  min-height: 80vh; /* Agar konten tidak terlalu kecil */
+  padding-top: 20px;
+}
 </style>
