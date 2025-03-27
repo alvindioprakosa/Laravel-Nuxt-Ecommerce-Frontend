@@ -2,29 +2,28 @@
   <div class="c-app">
     <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
       <div class="c-sidebar-brand d-lg-down-none">
-        <img src="/images/xiaomi.png" class="bg-light rounded shadow-sm p-2" width="35"> <span class="ml-2 font-weight-bold">MI STORE</span>
+        <img src="/images/xiaomi.png" class="bg-light rounded shadow-sm p-2" width="35" alt="Logo MI Store">
+        <span class="ml-2 font-weight-bold">MI STORE</span>
       </div>
 
-      <!-- sidebar -->
+      <!-- Sidebar -->
       <Sidebar />
-      <!-- end sidebar -->
-
     </div>
+
     <div class="c-wrapper c-fixed-components">
-      
-      <!-- header -->
+      <!-- Header -->
       <Header />
-      <!-- end header -->
 
       <div class="c-body">
-
-        <!-- content -->
+        <!-- Content -->
         <Nuxt />
-        <!-- end content -->
-
+        
+        <!-- Footer -->
         <footer class="c-footer">
-          <div><strong>MI STORE</strong> &copy; 2023 - yanafriyoko.com.</div>
-          <div class="ml-auto">Template by&nbsp;<a href="https://coreui.io/">CoreUI</a></div>
+          <div><strong>MI STORE</strong> &copy; {{ new Date().getFullYear() }} - yanafriyoko.com.</div>
+          <div class="ml-auto">
+            Template by&nbsp;<a href="https://coreui.io/" target="_blank" rel="noopener noreferrer">CoreUI</a>
+          </div>
         </footer>
       </div>
     </div>
@@ -32,23 +31,19 @@
 </template>
 
 <script>
+import Header from '@/components/admin/Header.vue';
+import Sidebar from '@/components/admin/Sidebar.vue';
 
-  import Header from '@/components/admin/header.vue'
-  import Sidebar from '@/components/admin/sidebar.vue'
+export default {
+  middleware: 'isAdmin', // Pastikan middleware sudah dibuat di middleware/isAdmin.js
 
-  export default {
-
-    //middleware
-    middleware: 'isAdmin',
-
-    //register components
-    components: {
-      Header,
-      Sidebar
-    }
-
+  components: {
+    Header,
+    Sidebar
   }
+}
 </script>
 
-<style>
+<style scoped>
+/* Tambahkan styling jika perlu */
 </style>
